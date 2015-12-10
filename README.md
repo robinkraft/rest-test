@@ -1,3 +1,8 @@
+This is a simple REST service written against this spec:
+
+https://github.com/robinkraft/rest-test/blob/master/spec.md
+
+
 ### Installation
 
 ```shell
