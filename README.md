@@ -21,10 +21,10 @@ Start the app: `python api/main.py`. Then run these commands in your terminal of
 curl -i -X GET http://localhost:5000/users/jsmith
 
 # add nmarcus user
-curl -i -H "Content-Type: application/json" -X POST -d '{"first_name": "Neiman", "last_name": "Marcus", "userid": "nmarcus", "groups": ["sales", "admin"]}' http://localhost:5000/users/nmarcus
+curl -i -H "Content-Type: application/json" -X POST -d '{"first_name": "Neiman", "last_name": "Marcus", "userid": "nmarcus", "groups": ["sales", "admins"]}' http://localhost:5000/users/nmarcus
 
-# modify nmarcus
-curl -i -H "Content-Type: application/json" -X PUT -d '{"first_name": "Neiman", "last_name": "Marcus-Aurelius", "userid": "nmarcus", "groups": ["sales", "admin"]}' http://localhost:5000/users/nmarcus
+# modify nmarcus - change last name
+curl -i -H "Content-Type: application/json" -X PUT -d '{"first_name": "Neiman", "last_name": "Marcus-Aurelius", "userid": "nmarcus", "groups": ["sales", "admins"]}' http://localhost:5000/users/nmarcus
 
 # delete nmarcus
 curl -i -X DELETE http://localhost:5000/users/nmarcus
@@ -45,7 +45,7 @@ curl -i -H "Content-Type: application/json" -X POST -d '{"name": "musicians"}' h
 curl -i -H "Content-Type: application/json" -X PUT -d '["jbach", "arose"]' http://localhost:5000/groups/musicians
 
 # check musicians group
-curl -i -X GET http://localhost:5000/groups/admins
+curl -i -X GET http://localhost:5000/groups/musicians
 
 # delete musicians group
 curl -i -X DELETE http://localhost:5000/groups/musicians
